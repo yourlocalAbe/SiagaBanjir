@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+    font-family:"Segoe UI",sans-serif;
+
+    background:#090909;
+
+}
+
+#map{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:1;
+
+}
+
+.app{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:1000;
+
+    pointer-events:none;
+
+}
+
+.sidebar,
+.topbar,
+.legend{
+
+    pointer-events:auto;
+
+}
+
+.right-panel{
+
+    position:absolute;
+
+    top:26px;
+    right:26px;
+    bottom:26px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+}
+
+.leaflet-interactive{
+
+    filter:
+
+    drop-shadow(0 0 6px cyan)
+
+    drop-shadow(0 0 12px cyan);
+
+}
+
+.pin-wrapper{
+
+position:relative;
+
+width:34px;
+height:34px;
+
+}
+
+.pin-glow{
+
+position:absolute;
+
+left:50%;
+top:72%;
+
+transform:translate(-50%,-50%);
+
+width:46px;
+height:30px;
+
+border-radius:50%;
+
+background:rgba(230,255,80,.28);
+
+filter:blur(11px);
+
+pointer-events:none;
+
+}
+
+/* ========================= */
+/* POPUP */
+/* ========================= */
+
+.custom-popup .leaflet-popup-content-wrapper{
+
+    background:rgba(15,15,15,.90);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    color:white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+}
+
+.custom-popup .leaflet-popup-tip{
+
+    background:#111;
+
+}
+
+.sensor-popup{
+
+    width:220px;
+
+    padding:8px;
+
+}
+
+.sensor-popup h2{
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+    font-weight:500;
+
+}
+
+.popup-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:14px;
+
+    font-size:15px;
+
+}
+
+.risk-badge{
+
+    margin-top:18px;
+
+    width:fit-content;
+
+    padding:10px 18px;
+
+    border-radius:18px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.risk-badge.high{
+
+    background:#7c0000;
+
+    color:#ff4d4d;
+
+}
+
+.risk-badge.medium{
+
+    background:#5c3a00;
+
+    color:#ffb300;
+
+}
+
+.risk-badge.low{
+
+    background:#004d25;
+
+    color:#00ff66;
+
+}
+
+.leaflet-popup-close-button{
+
+    display:none;
+
+}

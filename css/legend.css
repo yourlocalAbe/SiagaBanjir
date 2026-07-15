@@ -1,0 +1,101 @@
+/* ========================= */
+/* LEGEND */
+/* ========================= */
+
+.legend{
+
+    width:250px;
+
+    background:rgba(16,16,16,.42);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:22px;
+
+    color:white;
+
+}
+
+/* ========================= */
+
+.legend-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+}
+
+.legend-title img{
+
+    width:20px;
+    height:20px;
+
+    object-fit:contain;
+
+}
+
+.legend-title span{
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+/* ========================= */
+
+.legend-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin-bottom:22px;
+
+}
+
+.legend-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+.legend-item img{
+
+    width:22px;
+    height:30px;
+
+    object-fit:contain;
+
+}
+
+.legend-item h4{
+
+    font-size:18px;
+
+    font-weight:500;
+
+    margin:0;
+
+}
+
+.legend-item p{
+
+    margin-top:4px;
+
+    color:#9a9a9a;
+
+    font-size:13px;
+
+}

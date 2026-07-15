@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SiagaBanjir</title>
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/legend.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+
+    <!-- Background Map -->
+    <div id="map"></div>
+
+    <!-- Main Overlay -->
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <img src="assets/icons/logo.png" class="logo">
+                    <div>
+                        <h2>SiagaBanjir</h2>
+                        <p>Aplikasi SIG</p>
+                    </div>
+                </div>
+
+                <div class="live-status">
+                    <span class="live-dot"></span>
+                    <span>LIVE</span>
+                    <span class="separator">-</span>
+                    <span class="time">21.59 WIB</span>
+                </div>
+
+                <div class="divider"></div>
+                <div class="alert-card">
+                    <p class="alert-title">
+                        🟠 Real-Time Alert
+                    </p>
+                    <h3>Status : WASPADA</h3>
+                </div>
+
+                <div class="section-title">
+                    <img src="assets/icons/layer.png">
+                    <span>Layer Control</span>
+                </div>
+
+                <div class="layer-btn">
+                    <img src="assets/icons/connection.png">
+                    <div>
+                        <h4>IoT Sensors</h4>
+                        <p>17 Active</p>
+                    </div>
+                </div>
+
+                <div class="layer-btn">
+                    <img src="assets/icons/temp.png">
+                    <div>
+                        <h4>Flood Heatmap</h4>
+                        <p>Risk Density Overlay</p>
+                    </div>
+                </div>
+
+                <div class="section-title risk-title">
+                    <img src="assets/icons/filter.png">
+                    <span>Filter Risk Level</span>
+                </div>
+
+                <div class="risk high">
+                    <img src="assets/icons/red-risk.png">
+                    <span>High Risk</span>
+                    <b>2</b>
+                </div>
+
+                <div class="risk medium">
+                    <img src="assets/icons/orange-risk.png">
+                    <span>Medium Risk</span>
+                    <b>3</b>
+                </div>
+
+                <div class="risk low">
+                    <img src="assets/icons/green-risk.png">
+                    <span>Low Risk</span>
+                    <b>0</b>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Side -->
+        <div class="right-panel">
+
+            <div class="topbar">
+                <div class="notification">
+                    <img src="assets/icons/Notification.png" alt="Notification">
+                </div>
+
+                <div class="profile-card">
+                    <img src="assets/icons/Profile.png" class="profile-img">
+                    <div class="profile-info">
+                        <h4>Abshar H</h4>
+                        <p>Operator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-title">
+                    <img src="assets/icons/og.png">
+                    <span>Map Legend</span>
+                </div>
+
+                <div class="legend-item">
+                    <img src="assets/icons/red-risk.png">
+                    <div>
+                        <h4>High Risk</h4>
+                        <p>&gt; 150 cm</p>
+                    </div>
+                </div>
+
+                <div class="legend-item">
+                    <img src="assets/icons/orange-risk.png">
+                    <div>
+                        <h4>Medium Risk</h4>
+                        <p>80 - 150 cm</p>
+                    </div>
+                </div>
+
+                <div class="legend-item">
+                    <img src="assets/icons/green-risk.png">
+                    <div>
+                        <h4>Low Risk</h4>
+                        <p>&lt; 80 cm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
