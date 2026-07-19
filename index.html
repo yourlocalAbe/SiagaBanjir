@@ -51,7 +51,7 @@
                     <span class="live-dot"></span>
                     <span>LIVE</span>
                     <span class="separator">-</span>
-                    <span class="time">21.59 WIB</span>
+                    <span class="time" id="liveTime"></span>
                 </div>
 
                 <div class="divider"></div>
@@ -160,6 +160,25 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="js/app.js"></script>
+
+    <script>
+    function updateTime() {
+        const now = new Date();
+
+        const jam = String(now.getHours()).padStart(2, '0');
+        const menit = String(now.getMinutes()).padStart(2, '0');
+        const detik = String(now.getSeconds()).padStart(2, '0');
+
+        document.getElementById("liveTime").textContent =
+            `${jam}.${menit}.${detik} WIB`;
+    }
+
+    // Jalankan langsung
+    updateTime();
+
+    // Update setiap 1 detik
+    setInterval(updateTime, 1000);
+    </script>
 
 </body>
 </html>
